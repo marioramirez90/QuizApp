@@ -86,6 +86,7 @@ let currentQuestion = 0
 function init(){
     document.getElementById("all-questions").innerHTML = questions.length
     showQuestion()
+   
 }
 
 function showQuestion(){
@@ -95,5 +96,16 @@ function showQuestion(){
    document.getElementById("answer_2").innerHTML = question["answer_2"];
    document.getElementById("answer_3").innerHTML = question["answer_3"];
    document.getElementById("answer_4").innerHTML = question["answer_4"];
+}
+function answer(selection){
+     let question = questions[currentQuestion];
+     let selectionQuestionNumber = selection.slice(-1)
+     if (selectionQuestionNumber == question["right_answer"]) {
+       document.getElementById(selection).style.backgroundColor = "green";
+     }else{
+         document.getElementById(selection).style.backgroundColor = "red";
+     }
+
+
 
 }
