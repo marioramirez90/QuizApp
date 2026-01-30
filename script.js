@@ -1,6 +1,6 @@
 let questions = [
     {
-        "question": "wer hat HTML erfunden",
+        "question": "wer hat HTML erfunden ?",
         "answer_1": "bill gates",
         "answer_2": "tim berners-lee",
         "answer_3": "mark zuckerberg",
@@ -8,7 +8,7 @@ let questions = [
         "right_answer": 2
     },
     {
-        "question": "wofür steht HTML",
+        "question": "wofür steht HTML ?",
         "answer_1": "Hyper Text Markup Language",
         "answer_2": "High Text Machine Language",
         "answer_3": "Hyperlinks Text Mark Language",
@@ -16,7 +16,7 @@ let questions = [
         "right_answer": 1
     },
     {
-        "question": "welches tag macht einen absatz",
+        "question": "welches tag macht einen absatz ?",
         "answer_1": "<div>",
         "answer_2": "<span>",
         "answer_3": "<p>",
@@ -24,7 +24,7 @@ let questions = [
         "right_answer": 3
     },
     {
-        "question": "welches tag ist für überschriften",
+        "question": "welches tag ist für überschriften ?",
         "answer_1": "<p>",
         "answer_2": "<h1>",
         "answer_3": "<br>",
@@ -32,7 +32,7 @@ let questions = [
         "right_answer": 2
     },
     {
-        "question": "wo kommt JavaScript im HTML rein",
+        "question": "wo kommt JavaScript im HTML rein ?",
         "answer_1": "<css>",
         "answer_2": "<style>",
         "answer_3": "<script>",
@@ -40,7 +40,7 @@ let questions = [
         "right_answer": 3
     },
     {
-        "question": "wie schreibt man einen kommentar in JavaScript",
+        "question": "wie schreibt man einen kommentar in JavaScript ?",
         "answer_1": "/* kommentar */",
         "answer_2": "<!-- kommentar -->",
         "answer_3": "// kommentar",
@@ -48,7 +48,7 @@ let questions = [
         "right_answer": 3
     },
     {
-        "question": "wie zeigt man text in JavaScript an",
+        "question": "wie zeigt man text in JavaScript an ?",
         "answer_1": "console.log()",
         "answer_2": "print()",
         "answer_3": "echo()",
@@ -56,7 +56,7 @@ let questions = [
         "right_answer": 1
     },
     {
-        "question": "welches zeichen beendet einen JavaScript befehl",
+        "question": "welches zeichen beendet einen JavaScript befehl ?",
         "answer_1": ".",
         "answer_2": ",",
         "answer_3": ";",
@@ -64,7 +64,7 @@ let questions = [
         "right_answer": 3
     },
     {
-        "question": "wie heißt eine variable in JavaScript",
+        "question": "wie heißt eine variable in JavaScript ?",
         "answer_1": "number",
         "answer_2": "let",
         "answer_3": "text",
@@ -72,7 +72,7 @@ let questions = [
         "right_answer": 2
     },
     {
-        "question": "welches html tag zeigt ein bild",
+        "question": "welches html tag zeigt ein bild ?",
         "answer_1": "<image>",
         "answer_2": "<pic>",
         "answer_3": "<img>",
@@ -81,8 +81,19 @@ let questions = [
     }
 ];
 
+let currentQuestion = 0
+
 function init(){
     document.getElementById("all-questions").innerHTML = questions.length
+    showQuestion()
 }
 
-function showQuestion()
+function showQuestion(){
+    let question = questions[currentQuestion];
+   document.getElementById("question-text").innerHTML = question["question"];
+   document.getElementById("answer_1").innerHTML = question["answer_1"];
+   document.getElementById("answer_2").innerHTML = question["answer_2"];
+   document.getElementById("answer_3").innerHTML = question["answer_3"];
+   document.getElementById("answer_4").innerHTML = question["answer_4"];
+
+}
