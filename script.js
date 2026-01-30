@@ -80,3 +80,9 @@ let questions = [
         "right_answer": 3
     }
 ];
+
+function init(){
+    document.getElementById("all-questions").innerHTML = questions.length
+}
+
+function showQuestion()
