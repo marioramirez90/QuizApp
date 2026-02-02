@@ -100,10 +100,11 @@ function showQuestion(){
 function answer(selection){
      let question = questions[currentQuestion];
      let selectionQuestionNumber = selection.slice(-1)
+
      if (selectionQuestionNumber == question["right_answer"]) {
-       document.getElementById(selection).style.backgroundColor = "green";
+       document.getElementById(selection).parentNode.classList.add('bg-success');
      }else{
-         document.getElementById(selection).style.backgroundColor = "red";
+       document.getElementById(selection).parentNode.classList.add("bg-danger");
      }
 
 
