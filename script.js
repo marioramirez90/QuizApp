@@ -82,6 +82,7 @@ let questions = [
 ];
 
 let currentQuestion = 0
+let righQuestion = 0
 
 function init(){
     document.getElementById("all-questions").innerHTML = questions.length
@@ -95,6 +96,10 @@ function showQuestion(){
     if(currentQuestion >= questions.length){
         document.getElementById("endscreen").style = ""
         document.getElementById("questionBody").style = "display : none"
+
+        document.getElementById("question-number-final").innerHTML = questions.length;
+        document.getElementById("amout-right-questions").innerHTML = righQuestion
+        
     }else{
         let question = questions[currentQuestion];
    document.getElementById("question-number").innerHTML = currentQuestion + 1;
@@ -113,6 +118,7 @@ function answer(selection){
 
      if (selectionQuestionNumber == question["right_answer"]) {
        document.getElementById(selection).parentNode.classList.add('bg-success');
+       righQuestion++;
 
      }else{
        document.getElementById(selection).parentNode.classList.add("bg-danger");
