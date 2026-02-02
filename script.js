@@ -159,3 +159,11 @@ function resteAnswerButton(){
     document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
 
 }
+
+function restartGame(){
+   currentQuestion = 0
+   righQuestion = 0
+   init()
+     document.getElementById("endscreen").style = "display : none"
+        document.getElementById("questionBody").style = ""
+}
