@@ -101,6 +101,13 @@ function showQuestion(){
         document.getElementById("amout-right-questions").innerHTML = righQuestion
         
     }else{
+        let percent = currentQuestion +1 / questions.length ;
+        percent = Math.round(percent * 100);
+
+        document.getElementById("progress-bar").innerHTML = `${percent} %`;
+         document.getElementById("progress-bar").style = `width: ${percent}%;`;
+
+
         let question = questions[currentQuestion];
    document.getElementById("question-number").innerHTML = currentQuestion + 1;
    document.getElementById("question-text").innerHTML = question["question"];
