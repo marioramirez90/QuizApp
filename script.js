@@ -1,54 +1,54 @@
 let questions = [
     {
-        "question": "wer hat HTML erfunden ?",
-        "answer_1": "bill gates",
-        "answer_2": "tim berners-lee",
-        "answer_3": "mark zuckerberg",
-        "answer_4": "steve jobs",
+        "question": "Wer hat HTML erfunden?",
+        "answer_1": "Bill Gates",
+        "answer_2": "Tim Berners-Lee",
+        "answer_3": "Mark Zuckerberg",
+        "answer_4": "Steve Jobs",
         "right_answer": 2
     },
     {
-        "question": "wofür steht HTML ?",
-        "answer_1": "Hyper Text Markup Language",
+        "question": "Wofür steht HTML?",
+        "answer_1": "HyperText Markup Language",
         "answer_2": "High Text Machine Language",
         "answer_3": "Hyperlinks Text Mark Language",
         "answer_4": "Home Tool Markup Language",
         "right_answer": 1
     },
     {
-        "question": "welches tag macht einen absatz ?",
-        "answer_1": "<div>",
-        "answer_2": "<span>",
-        "answer_3": "<p>",
-        "answer_4": "<h1>",
+        "question": "Welcher HTML-Tag-Name wird für einen Absatz verwendet?",
+        "answer_1": "Das div-Tag",
+        "answer_2": "Das span-Tag",
+        "answer_3": "Das p-Tag",
+        "answer_4": "Das h1-Tag",
         "right_answer": 3
     },
     {
-        "question": "welches tag ist für überschriften ?",
-        "answer_1": "<p>",
-        "answer_2": "<h1>",
-        "answer_3": "<br>",
-        "answer_4": "<img>",
+        "question": "Welcher Tag ist für die wichtigste Überschrift gedacht?",
+        "answer_1": "Das p-Tag",
+        "answer_2": "Das h1-Tag",
+        "answer_3": "Das br-Tag",
+        "answer_4": "Das img-Tag",
         "right_answer": 2
     },
     {
-        "question": "wo kommt JavaScript im HTML rein ?",
-        "answer_1": "<css>",
-        "answer_2": "<style>",
-        "answer_3": "<script>",
-        "answer_4": "<js>",
+        "question": "Wie heißt der Tag zum Einbinden von JavaScript?",
+        "answer_1": "css",
+        "answer_2": "style",
+        "answer_3": "script",
+        "answer_4": "javascript",
         "right_answer": 3
     },
     {
-        "question": "wie schreibt man einen kommentar in JavaScript ?",
-        "answer_1": "/* kommentar */",
-        "answer_2": "<!-- kommentar -->",
-        "answer_3": "// kommentar",
-        "answer_4": "** kommentar **",
+        "question": "Wie beginnt ein einzeiliger Kommentar in JavaScript?",
+        "answer_1": "/*",
+        "answer_2": "Mit Pfeilen",
+        "answer_3": "//",
+        "answer_4": "##",
         "right_answer": 3
     },
     {
-        "question": "wie zeigt man text in JavaScript an ?",
+        "question": "Welcher Befehl schreibt Text in die Browser-Konsole?",
         "answer_1": "console.log()",
         "answer_2": "print()",
         "answer_3": "echo()",
@@ -56,27 +56,27 @@ let questions = [
         "right_answer": 1
     },
     {
-        "question": "welches zeichen beendet einen JavaScript befehl ?",
-        "answer_1": ".",
-        "answer_2": ",",
-        "answer_3": ";",
-        "answer_4": ":",
+        "question": "Welches Symbol beendet normalerweise eine JS-Anweisung?",
+        "answer_1": "Punkt",
+        "answer_2": "Komma",
+        "answer_3": "Semikolon (;)",
+        "answer_4": "Doppelpunkt",
         "right_answer": 3
     },
     {
-        "question": "wie heißt eine variable in JavaScript ?",
-        "answer_1": "number",
+        "question": "Mit welchem Wort deklariert man eine moderne Variable?",
+        "answer_1": "variable",
         "answer_2": "let",
-        "answer_3": "text",
-        "answer_4": "value",
+        "answer_3": "create",
+        "answer_4": "set",
         "right_answer": 2
     },
     {
-        "question": "welches html tag zeigt ein bild ?",
-        "answer_1": "<image>",
-        "answer_2": "<pic>",
-        "answer_3": "<img>",
-        "answer_4": "<src>",
+        "question": "Welche Abkürzung wird im Tag für Bilder genutzt?",
+        "answer_1": "image",
+        "answer_2": "pic",
+        "answer_3": "img",
+        "answer_4": "src",
         "right_answer": 3
     }
 ];
@@ -85,12 +85,14 @@ let currentQuestion = 0
 
 function init(){
     document.getElementById("all-questions").innerHTML = questions.length
+    
     showQuestion()
    
 }
 
 function showQuestion(){
     let question = questions[currentQuestion];
+   document.getElementById("question-number").innerHTML = currentQuestion + 1;
    document.getElementById("question-text").innerHTML = question["question"];
    document.getElementById("answer_1").innerHTML = question["answer_1"];
    document.getElementById("answer_2").innerHTML = question["answer_2"];
@@ -121,8 +123,6 @@ function nextQuestion(){
     resteAnswerButton()
     showQuestion();
 
-
-    
 }
 
 function resteAnswerButton(){
