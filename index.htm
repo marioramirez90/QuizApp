@@ -17,8 +17,18 @@
 </nav>
    </header>
   <div class="container">
-   <div class="card quiz-card">
+   <div class="card quiz-card"  id="endscreen" style="display: none;">
+  <img src="img/youwin.jpg" class="card-img-top" alt="...">
+
+  <div class="card-body">
+     <div class="text-center">Quiz beendet!</div>
+    <div class="text-center">    do hast xxx fragen von xxxx richtg</div>
+  </div>
+  </div>
+
+   <div class="card quiz-card"  id="questionBody">
   <img src="img/quiz-5595288_1280.jpg" class="card-img-top" alt="...">
+
   <div class="card-body">
     <h5 id="question-text" class="card-title">Frage:</h5>
 
@@ -52,6 +62,7 @@
     </span>
 <button onclick="nextQuestion()" type="button" id="next-button" class="btn btn-outline-primary" disabled>Nächste Frage</button>
 </div>
+
 
 </div>
 </div>
